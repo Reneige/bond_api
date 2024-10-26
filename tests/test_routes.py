@@ -1,0 +1,14 @@
+import requests
+from config import HOST, PORT
+
+def test_case_1():
+    print(f" TESTING http://{HOST}:{PORT}/bond/XS2008921277")
+    response = requests.get(f"http://{HOST}:{PORT}/bond/XS2008921277")
+    testcase = '{"Issuer":"Unilever PLC","Ticker":"ULVR","Coupon":1.5,"Maturity":"2026-07-22T00:00:00","IssueDate":"2019-06-11T00:00:00","ISIN":"XS2008921277","PreferredRIC":"GB200892127","PrincipalCurrency":"British Pound","CountryofIssue":"Eurobond","IssuerType":"Corporate","InstrumentType":"Note","CouponType":"Plain Vanilla Fixed Coupon","BondGrade":"Investment Grade","Sector":"Consumer Products","GreenBond":"No","Putable":"No","Callable":"No","HasSinkingFund":"No","CouponFrequency":null,"CapitalTier":null,"IsCallable":null,"IsPutable":null,"SeniorityType":null,"SeniorityTypeShortDescription":null,"SIC":null,"GuarantorType":"Other","OptionAdjustedSpread":null,"BidAskSpread":null,"TypeofSinkingFund":null,"NegativePledgeFlag":null,"DebtIncurrenceLimitationFlag":null,"CrossDefaultFlag":null,"ChangeOfControlPutFlag":null,"SaleOfAssetsFlag":null,"AffiliateTransactionsFlag":null,"MergerFlag":null,"SaleLeasebackFlag":null,"CollectiveActionClausesFlag":null,"ForceMajeureFlag":null,"DefaultEventsFlag":null,"KeepwellAgreementFlag":null,"PariPassuFlag":null,"GreenBondFlag":null,"FirstCouponDate":null,"MaturityYearsToRedem":null,"DayCount":null,"AssetStatus":null,"AssetStatusDescription":null}'
+    assert response.text == testcase
+
+def test_case_2():
+    print(f" TESTING http://{HOST}:{PORT}/bond/XS1821535678")
+    response = requests.get(f"http://{HOST}:{PORT}/bond/XS1821535678")
+    testcase = '{"Issuer":"National Grid PLC","Ticker":"NGNGD","Coupon":0.01,"Maturity":"2028-05-16T00:00:00","IssueDate":"2018-05-16T00:00:00","ISIN":"XS1821535678","PreferredRIC":"US182153567","PrincipalCurrency":"British Pound","CountryofIssue":"Eurobond","IssuerType":"Corporate","InstrumentType":"Note","CouponType":"Plain Vanilla Fixed Coupon","BondGrade":"Investment Grade","Sector":"Utility - Other","GreenBond":"No","Putable":"No","Callable":"No","HasSinkingFund":"No","CouponFrequency":2.0,"CapitalTier":null,"IsCallable":"N","IsPutable":"N","SeniorityType":"SR","SeniorityTypeShortDescription":"Senior Unsecured","SIC":4911.0,"GuarantorType":null,"OptionAdjustedSpread":null,"BidAskSpread":null,"TypeofSinkingFund":null,"NegativePledgeFlag":"Y","DebtIncurrenceLimitationFlag":null,"CrossDefaultFlag":null,"ChangeOfControlPutFlag":null,"SaleOfAssetsFlag":null,"AffiliateTransactionsFlag":null,"MergerFlag":null,"SaleLeasebackFlag":null,"CollectiveActionClausesFlag":null,"ForceMajeureFlag":null,"DefaultEventsFlag":null,"KeepwellAgreementFlag":null,"PariPassuFlag":null,"GreenBondFlag":"N","FirstCouponDate":"2018-11-16","MaturityYearsToRedem":null,"DayCount":"Actual/Actual ICMA, Act/Act ICMA, Actual/Actual ISMA","AssetStatus":"ISS","AssetStatusDescription":"Issued"}'
+    assert response.text == testcase

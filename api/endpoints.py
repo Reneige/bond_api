@@ -19,7 +19,6 @@ def get_session() -> Session:
     finally:
         session.close()
 
-
 @app.get("/bond/{isin}", response_model=Bond)
 def get_bond(isin: str, db: Annotated[Session, Depends(get_session)]) -> MasterBond:
     bond = db.get(MasterBond, isin)

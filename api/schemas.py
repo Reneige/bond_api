@@ -64,4 +64,4 @@ class Prices(BaseModel):
     RedemptionDate: str | None
     ID: str | None
     ISIN: str | None
-        
+    
