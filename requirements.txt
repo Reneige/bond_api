@@ -1,0 +1,7 @@
+poetry==1.4
+fastapi>=0.103
+pytest==8.3.3
+sqlalchemy>=2.0
+flake8==7.1.1
+mypy==1.13.0
+uvicorn==0.32
