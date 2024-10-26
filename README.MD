@@ -2,7 +2,7 @@
 <!-- Title: -->
   <a href="https://github.com/Reneige/bond_api/">
   </a>
-  <h1><a href="https://github.com/Reneige/bond_api/">UK Corporate Bond Data API Mini Project</a></h1>
+  <h1><a href="https://github.com/Reneige/bond_api/">FastAPI Mini Project</a></h1>
 <!-- Short description: -->
 </div>
 
